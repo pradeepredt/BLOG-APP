@@ -1,6 +1,6 @@
 export const errorHandler=(stausCode,message)=>{
     const error=new Error();
-    error.status=stausCode;
+    error.statusCode=stausCode;
     error.message=message;
     return error;
 }
