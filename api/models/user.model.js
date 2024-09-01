@@ -1,28 +1,27 @@
-import mongoose  from "mongoose";
+import mongoose from "mongoose";
 
-const userSchema=new mongoose.Schema({
+const userSchema = new mongoose.Schema({
     username:{
-        type:String,
-        required:true,
-        unique:true,
-
+        type: String,
+        requied:true,
+        uniqe:true,
     },
     email:{
         type:String,
-        required:true,
+        requied:true,
         unique:true,
     },
     password:{
         type:String,
-        required:true,
+        requied:true,
     },
     profilePicture:{
-        type:String,
-        default:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAd5avdba8EiOZH8lmV3XshrXx7dKRZvhx-A&s"
+        type: String,
+        default: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAd5avdba8EiOZH8lmV3XshrXx7dKRZvhx-A&s",
     },
-},{timestamps:true}
-)
+    },{timestamps:true}
+);
 
-const User=mongoose.model('User',userSchema);
+const User = mongoose.model('User', userSchema);
 
 export default User;
